@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+# Prevent failures from being reported twice.
+Thread.report_on_exception = false
+
+require "bundler/setup"
+require "amazon_kamal"
+
+AmazonKamal::Cli::Main.start(ARGV)

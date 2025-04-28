@@ -1,0 +1,6 @@
+[Unit]
+Description=Run App CleanupJob
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/kamal-rails-runner app "CleanupJob.perform_now"
