@@ -1,5 +1,5 @@
 # Amazon Kamal
-A set of tasks for bootstrapping and managing Amazon Linux servers running Kamal.
+A set of command line tools for bootstrapping and managing Amazon Linux servers running Kamal.
 
 ## Installation
 Add this line to your application’s Gemfile:
