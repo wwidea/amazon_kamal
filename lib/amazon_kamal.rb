@@ -1,3 +1,6 @@
+module AmazonKamal
+end
+
 require "kamal"
 require "zeitwerk"
 
