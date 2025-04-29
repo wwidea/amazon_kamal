@@ -43,6 +43,7 @@ Installs systemd services and timers located in the `config/systemd` directory o
 amazon-kamal timers add      # Add systemd timers
 amazon-kamal timers remove   # Remove systemd timers
 amazon-kamal timers show     # Show timers
+amazon-kamal timers logs     # Show logs for systemd timers
 ```
 
 #### Example systemd files
