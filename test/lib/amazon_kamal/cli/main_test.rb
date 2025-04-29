@@ -13,7 +13,7 @@ class AmazonKamal::Cli::MainTest < ActiveSupport::TestCase
   end
 
   test "should return version" do
-    assert_equal "0.1.0", run_command("version")
+    assert_equal AmazonKamal::VERSION, run_command("version")
   end
 
   private
