@@ -13,7 +13,8 @@ Gem::Specification.new do |spec|
 
   spec.metadata = {
     "homepage_uri"    => spec.homepage,
-    "source_code_uri" => spec.homepage
+    "source_code_uri" => spec.homepage,
+    "rubygems_mfa_required" => "true"
   }
 
   spec.required_ruby_version = ">= 3.2.0"
