@@ -10,6 +10,14 @@ class AmazonKamal::Cli::TimersTest < ActiveSupport::TestCase
     end
   end
 
+  test "should show timers logs" do
+    SSHKit::Backend::Abstract.any_instance.expects(:capture).with(
+      :journalctl,
+      includes("app-cleanup-job.service")
+    ).returns(true)
+    assert_match "Displaying logs for systemd timers on 1.1.1.1...", run_command("logs")
+  end
+
   test "should remove timers" do
     SSHKit::Backend::Abstract.any_instance.expects(:execute).at_least_once.returns(true)
     run_command("remove").tap do |output|

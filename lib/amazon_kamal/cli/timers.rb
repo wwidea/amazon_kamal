@@ -30,6 +30,17 @@ class AmazonKamal::Cli::Timers < Kamal::Cli::Base
     end
   end
 
+  desc "logs", "Show logs for systemd timers"
+  def logs
+    say "Displaying logs for systemd timers on #{KAMAL.primary_host}...", :magenta
+    timers do |timer|
+      on(KAMAL.primary_host) do
+        info timer
+        puts capture(:journalctl, "-u #{timer}.service -n 20 --no-pager --no-hostname")
+      end
+    end
+  end
+
   desc "remove", "Remove systemd timers"
   def remove
     say "Removing systemd timers from #{KAMAL.primary_host}...", :magenta
