@@ -11,6 +11,11 @@ Gem::Specification.new do |spec|
   spec.files        = Dir["lib/**/*", "MIT-LICENSE", "README.md"]
   spec.executables  = %w[ amazon-kamal ]
 
+  spec.metadata = {
+    "homepage_uri"    => spec.homepage,
+    "source_code_uri" => spec.homepage
+  }
+
   spec.required_ruby_version = ">= 3.2.0"
 
   spec.add_dependency "kamal", ">= 2.5"
