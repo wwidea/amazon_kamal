@@ -12,6 +12,19 @@ And then execute:
 bundle install
 ```
 
+## Launch A New Server
+Launch a new AWS EC2 Amazon Linux instance and add it to the servers section of the Kamal deploy.yml file.
+
+Run the amazon-kamal bootstrap command to install docker:
+```sh
+amazon-kamal bootstrap
+```
+
+Then proceed with Kamal setup:
+```sh
+kamal setup
+```
+
 ## Commands
 ### Bootstrap
 Bootstraps an Amazon Linux 2023 server by updating packages, installing and configuring Docker, and disabling unnecessary services.
